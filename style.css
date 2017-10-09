@@ -1,0 +1,686 @@
+/*
+Theme Name: SuperIndieIO v2.5
+Theme URI: http://www.superindie.io
+Author: A. Dean Kelly
+Description: SuperIndie.io
+Version: 2.5.01a
+License: N/A
+Tags: SuperIndieIO
+Text Domain: SuperIndieIO
+*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #E0F2F1;
+    overflow: auto;
+    }
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    }
+a {
+    color: #212121;
+    }
+header {
+    max-height: 60px;
+    margin: 16px auto 0 auto;
+    }
+main {
+    max-width: 1296px;
+    margin: 16px auto 0px auto;
+    overflow: auto;
+    }
+aside {
+    overflow: auto;
+    }
+footer {
+    width: 100%;
+    margin: 32px auto;
+    }
+blockquote {
+    margin: 0 32px;
+    }
+
+/*Logo Styles*/
+#SI-LogoLarge {
+    display: none;
+    margin: 0 auto;
+    }
+#SI-LogoSmall {
+    display: none;
+    margin: 0 auto;
+    }
+
+/*Post ID Styles */
+#SI-MainPosts {
+    width: 960px;
+    margin: 0 16px 0 0;
+    float: left;
+    overflow: auto;
+    }
+#SI-Post {
+    width: 100%;
+    position: relative;
+    border-radius: 4px;
+    }
+#SI-Page {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 4px;
+    }
+#SI-PostImage {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+    }
+#SI-PageImage {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+    }
+#SI-PostBody {
+    width: calc(100% - 384px);
+    margin: 0 32px 16px 16px;
+    float: left;
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 150%;
+    overflow: auto;
+    }
+#SI-PostHeadline {
+    margin: 24px 0 24px 0;
+    color: #484848;
+    font-size: 3em;
+    font-family: 'Roboto';
+    font-weight: 900;
+    line-height: 1em;
+    vertical-align: bottom;
+    }
+#SI-PageHeadline {
+    margin: 24px 0 24px 0;
+    color: #484848;
+    font-size: 3em;
+    font-family: 'Roboto';
+    font-weight: 900;
+    line-height: 1em;
+    vertical-align: bottom;
+    }
+#SI-PostSubHeadline {
+    margin: 16px 0;
+    color: #757575;
+    font-style: italic;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    }
+#SI-PostAuthor {
+    margin: 16px 0;
+    padding: 6px 0;
+    color: #757575;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    border-top: #757575 1px solid;
+    border-bottom: #757575 1px solid;
+    }
+#SI-PostAuthor > a {
+    color: #484848;
+    text-decoration: none;
+    }
+#SI-PostDate {
+    float: right;
+    }
+#SI-PostBodyText {
+    color: #484848;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    }
+#SI-PageBodyText {
+    color: #484848;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    }
+#SI-PostBodyText > h3 {
+    margin: 1em 0;
+    font-size: 24px;
+    }
+#SI-PostBodyText > h4, h5, h6 {
+    margin: 1em 0;
+    font-size: 20px;
+    }
+#SI-PostBodyText > a, a:visited {
+    color: #212121;
+    }
+#SI-PostSocialMedia {
+    display: inline-block;
+    padding: 16px 0;
+    width: 100%;
+    border-top: #484848 1px solid;
+    text-align: center;
+    }
+#SI-PostNav {
+    display: table;
+    margin: 0 auto;
+    }
+#SI-404 {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+/*SI Footer IDs*/
+#SI-FooterLogo {
+    display: block;
+    margin: 16px auto;
+    }
+#SI-FooterInfo {
+    display: table;
+    margin: 16px auto;
+    }
+#SI-FooterInfo > a {
+    display: inline-table;
+    margin: 0 8px;
+    color: #484848;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    }
+#SI-FooterSocialIcons {
+    margin: 0 auto -12px auto;
+    display: table;
+}
+#SI-FooterSocialIcons > a {
+    text-decoration: none;
+}
+
+/*Post Class Styles*/
+.SI-Headline {
+    font-size: 1em;
+    }
+.SI-PostLarge {
+    margin: 0 0 16px 0;
+    position: relative;
+    border-radius: 4px;
+    }
+.SI-PostLargeHeadline {
+    margin: 16px;
+    position: absolute;
+    bottom: 0;
+    color: #f6f6f6;
+    font-size: 3em;
+    font-family: 'Roboto';
+    text-shadow: 4px 4px 2px #484848;
+    vertical-align: bottom;
+    }
+.SI-PostLargeSubHeadline {
+    max-height: 0;
+    margin: 0;
+    color: #f6f6f6;
+    font-size: 0.5em;
+    font-family: 'Roboto';
+    font-weight: 400;
+    text-shadow: 2px 2px #484848;
+    vertical-align: bottom;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 1s ease, visibility 1s;
+    }
+.SI-PostLarge:hover .SI-PostLargeSubHeadline {
+    visibility: visible;
+    max-height: 4em;
+    }
+.SI-PostMedium {
+    width:960px; 
+    height: 0;
+    padding-top: 28.125%;
+    margin: 0 0 16px 0;
+    position: relative;
+    float: left;
+    border-radius: 4px;
+    }
+.SI-PostMediumText {
+    margin: 16px;
+    position:absolute;
+    bottom: 0;
+    color: #f6f6f6;
+    font-family: 'Roboto';
+    text-shadow: 2px 2px #484848;
+    overflow: hidden;
+    }
+.SI-PostMedium:hover .SI-PostMediumSubHeadline {
+    max-height: 4em;
+    visibility: visible;
+    }
+.SI-PostMediumSubHeadline {
+    max-height: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 500;
+    transition: max-height 1s ease, visibility 1s;
+    }
+.SI-PostSmall { 
+    width: calc((100% - 16px)/2); 
+    height: 0;
+    padding-top: 28.125%;
+    position: relative;
+    border-radius: 4px;
+    }
+.SI-PostSmallText {
+    margin: 16px;
+    position: absolute;
+    bottom: 0;
+    color: #f6f6f6;
+    font-family: 'Roboto';
+    text-shadow: 2px 2px #484848;
+    overflow: hidden;
+    }
+.SI-PostSmall:hover .SI-PostSmallSubHeadline {
+    max-height: 4em;
+    visibility: visible;
+    }
+.SI-PostSmallSubHeadline {
+    max-height: 0;
+    margin: 0;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 500;
+    transition: max-height 1s ease, visibility 1s;
+    }
+.SI-InArticle {
+    margin: 0 auto;
+}
+.SI-Sidebar {
+    position: relative;
+    float: left;
+    }
+.SI-SidebarSection {
+    width: 320px;
+    height: 180px;
+    margin: 0 auto 16px auto;
+    position: relative;
+    background-color: #CCC;
+    border-radius: 4px;
+    }
+.SI-SidebarSectionTitle {
+    display: inline-block;
+    margin: 0 0 16px 0;
+    color: #484848;
+    float: left;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    border-bottom: #484848 4px solid;
+    }
+.SI-SidebarOther {
+    width: 100%;
+    margin: 0 auto 8px auto;
+    float: left;
+    }
+
+/*Social Media Classes*/
+.social-image {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin: 0 6px;
+    }
+.social-image-follow {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 0 4px;
+    }
+
+/*Post Sub Classes*/
+.post-left {
+    margin: 0 16px 16px 0;
+    float: left;
+    }
+.post-right {
+    margin: 0 0 16px 0;
+    float: left;
+    }
+/*Search*/
+input[type="text"] {
+    width: 214px;
+    height: 28px;
+    padding: 4px;
+    color: #484848;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    border-color: #484848;
+    }
+input[type="submit"] {
+    height: 40px;
+    float: right;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    border-color: #484848;
+    background-color: #E0F2F1;
+    }
+
+.SI-SidebarSearchTitle {
+    display: inline-block;
+    color: #484848;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    border-bottom: #484848 2px solid;
+    }
+.SI-SidebarSearch {
+    margin: 16px auto;
+    position: relative;
+    }
+.screen-reader-text {
+    display: none;
+    }
+
+/*Navigation */
+.navigation ul
+{
+    padding: 0;
+}
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+    text-decoration:none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+.navigation li {
+    display: inline;
+}
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+    padding: 12px;
+    color: #484848;
+}
+.navigation li a:hover,
+.navigation li.active a {
+    color: #484848;
+    font-weight: 900;
+}
+
+/*Universal Sub Classes*/
+.img-background {
+    background: no-repeat center;
+    background-size: cover;
+    }
+.italics {
+    font-style: italic;
+    }
+.float-right {
+    float: right;
+    }
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/*Twitter Embed CSS */
+blockquote.twitter-tweet {
+  display: inline-block;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  border-color: #eee #ddd #bbb;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 10px 5px;
+  padding: 0 16px 16px 16px;
+  max-width: 468px;
+}
+
+blockquote.twitter-tweet p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+blockquote.twitter-tweet a {
+  color: inherit;
+  font-weight: normal;
+  text-decoration: none;
+  outline: 0 none;
+}
+
+blockquote.twitter-tweet a:hover,
+blockquote.twitter-tweet a:focus {
+  text-decoration: underline;
+}
+
+/*Large Desktop Screen Sizing*/
+@media only screen and (min-width: 1328px)
+{
+    aside {
+        max-width: 320px;
+        margin: 16px 0 0 0;
+        }
+    .SI-PostLarge {
+        width: 1296px; 
+        height: 0;
+        padding-top: 42.1875%;
+        }
+    .SI-SidebarOther {
+        max-width: 300px;
+	margin: 0 10px 8px 10px;
+        }
+}
+/*Smaller Desktop Screen Sizes*/
+@media only screen and (min-width: 1056px) and (max-width: 1327px)
+{
+    main {
+        max-width: 100%;
+        margin: 16px 16px 0 16px;
+        }
+    aside {
+        max-width: 320px;
+        margin: 16px 0 0 0;
+        }
+    #SI-MainPosts {
+        width: calc(100% - 336px);
+        }
+    #SI-PostBody {
+        width: calc(100% - 384px);
+        }
+    .SI-PostLarge {
+        width: 100%;
+        height: 0;
+        padding-top: 42.1875%;
+        }
+    .SI-PostMedium {
+        width: 100%;
+        height: 0;
+        padding-top: 28.125%;
+        }
+    .SI-PostSmall {
+        width: calc((100% - 16px)/2);
+        height: 0;
+        padding-top: 28.125%;
+        }
+    .SI-SidebarOther {
+        max-width: 300px;
+	max-height: 250px;
+	margin: 0 10px 8px 10px;
+        }
+}
+
+/*Tablet Screen Sizes*/
+@media only screen and (min-width: 640px) and (max-width: 1055px)
+{
+    main {
+        max-width: 100%;
+        margin: 16px 16px 0 16px;
+        }
+    #SI-MainPosts {
+        width: 100%;
+        float: none;
+        }
+    #SI-PostBody {
+        width: calc(100% - 32px);
+        margin: 0 16px;
+        float: none;
+        }
+    #SI-PostSocialMedia {
+        margin-bottom: 16px;
+        padding: 16px 0 9px 0;
+        border-bottom: #484848 1px solid;
+        }
+    .SI-Sidebar {
+        margin: 0 auto;
+        float: none;
+        text-align: center;
+        }
+    .SI-PostLarge {
+        width: 100%;
+        height: 0;
+        padding-top: 42.1875%;
+        }
+     .SI-PostLargeHeadline {
+        font-size: 2em
+        }
+    .SI-PostMedium {
+        width: 100%;
+        height: 0;
+        padding-top: 28.125%;
+        }
+    .SI-PostSmall {
+        width: calc((100% - 16px)/2);
+        height: 0;
+        padding-top: 28.125%;
+        }
+    .SI-SidebarSection {
+                width: calc((100% - 32px)/2);
+        height: 0;
+        padding-top: 28.125%;
+        display: inline-block;
+        margin: 0 6px 16px 6px;
+        }
+    .SI-SidebarSectionTitle {
+        float: none;
+        margin: 0 0 16px 8px;
+        }
+    .SI-SidebarSearchTitle {
+        float: none;
+        margin: 0 0 0 8px;
+        }
+    input[type="text"] {
+        float: none;
+        margin: 0 0 0 8px;
+        }
+    input[type="submit"] {
+        float: none;
+        }
+    .SI-Leaderboard {
+        width: 468px;
+        height: 60px;
+        }
+}
+/*Mobile Screen Sizes*/
+@media only screen and (max-width: 639px)
+{
+    main {
+        max-width: 100%;
+        margin: 16px 8px;
+        }
+    #SI-MainPosts {
+        width: 100%;
+        float: none;
+        }
+    #SI-PostBody {
+        width: calc(100% - 16px);
+        margin: 0 8px;
+        font-size: 16px;
+        float: none;
+        }
+    .SI-Sidebar {
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+        text-align: center;
+        display: inline-block;
+        }
+    #SI-PostHeadline {
+        margin: 16px 0;
+        font-size: 2em;
+        }
+    #SI-PostSubHeadline {
+        margin: 8px 0;
+        font-size: 20px;
+        }
+    #SI-PostSocialMedia {
+        margin-bottom: 16px;
+        padding: 16px 0 9px 0;
+        border-bottom: #484848 1px solid;
+        }
+    .SI-PostLarge {
+        width: 100%; 
+        padding-top: 56.25%;
+        height: 0;
+        }
+    .SI-PostLargeHeadline {
+        font-size: 1.5em
+        }
+    .SI-PostLargeSubHeadline {
+        font-size: 0.75em;
+        }
+    .SI-PostMedium {
+        width: 100%;
+        padding-top: 42.1875%;
+        height: 0;
+        }
+    .SI-PostSmall {
+        width: 100%;
+        padding-top: 42.1875%;
+        height: 0
+        }
+    .SI-SidebarSection {
+        width: 100%;
+        padding-top: 28.125%;
+        height: 0;
+        margin: 0 auto 16px auto;
+        }
+    .SI-Leaderboard {
+        width: 320px;
+        height: 50px;
+        }
+    input[type="submit"] {
+        float: none;
+        }
+}
+@media only screen and (min-width: 640px)
+{
+    #SI-LogoLarge {
+        display: block;
+        }
+    #SI-LogoSmall {
+        display: none;
+        }
+}
+@media only screen and (max-width: 639px)
+{
+    #SI-LogoLarge {
+        display: none;
+        }
+    #SI-LogoSmall {
+        display: block;
+        }
+}
+@media only screen and (max-width: 420px)
+{
+    #SI-PostAuthor {
+        font-size: 15px;
+        }
+}
+::-webkit-scrollbar { 
+    display: none; 
+    }
