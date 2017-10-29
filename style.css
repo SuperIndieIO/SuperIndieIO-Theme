@@ -1,9 +1,10 @@
 /*
 Theme Name: SuperIndieIO v2.5
-Theme URI: http://www.superindie.io
+Theme URI: https://www.superindie.io
+Github Theme URI: https://github.com/SuperIndieIO/SuperIndieIO-Theme
 Author: A. Dean Kelly
 Description: SuperIndie.io
-Version: 2.5.01a
+Version: 2.5.01b
 License: N/A
 Tags: SuperIndieIO
 Text Domain: SuperIndieIO
@@ -172,8 +173,6 @@ blockquote {
     left: 50%;
     transform: translate(-50%, -50%);
     }
-
-/*SI Footer IDs*/
 #SI-FooterLogo {
     display: block;
     margin: 16px auto;
@@ -189,13 +188,6 @@ blockquote {
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     }
-#SI-FooterSocialIcons {
-    margin: 0 auto -12px auto;
-    display: table;
-}
-#SI-FooterSocialIcons > a {
-    text-decoration: none;
-}
 
 /*Post Class Styles*/
 .SI-Headline {
@@ -327,12 +319,6 @@ blockquote {
     width: 48px;
     height: 48px;
     margin: 0 6px;
-    }
-.social-image-follow {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    margin: 0 4px;
     }
 
 /*Post Sub Classes*/

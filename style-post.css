@@ -166,7 +166,7 @@ blockquote {
     text-align: center;
     }
 
-/*SI Footer IDs*/
+/*Footer IDs */
 #SI-FooterLogo {
     display: block;
     margin: 16px auto;
@@ -182,13 +182,6 @@ blockquote {
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     }
-#SI-FooterSocialIcons {
-    margin: 0 auto -12px auto;
-    display: table;
-}
-#SI-FooterSocialIcons > a {
-    text-decoration: none;
-}
 
 /*Post Class Styles*/
 .SI-Headline {
@@ -275,12 +268,6 @@ blockquote {
     height: 48px;
     margin: 0 6px;
     }
-.social-image-follow {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    margin: 0 4px;
-    }
 
 /*Universal Sub Classes*/
 .img-background {
@@ -294,7 +281,7 @@ blockquote {
 /*Embed-COntainer*/
 .embed-container {
     position: relative;
-    margin: 1em 0;
+    margin: 0 0 1em 0;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
@@ -348,7 +335,7 @@ blockquote.twitter-tweet a[href^="https://twitter.com"] {
         }
     .SI-SidebarOther {
         max-width: 300px;
-	   margin: 0 10px 16px 10px;
+		margin: 0 10px 16px 10px;
         }
 }
 
@@ -383,8 +370,8 @@ blockquote.twitter-tweet a[href^="https://twitter.com"] {
         }
     .SI-SidebarOther {
         max-width: 300px;
-	    max-height: 250px;
-	    margin: 0 10px 16px 10px;
+		max-height: 250px
+		margin: 0 10px 16px 10px;;
         }
 }
 

@@ -24,6 +24,16 @@
         </a>
         </span>
             
+        <!-- SuperIndieIO-TopLeaderboard -->
+        <ins class="adsbygoogle"
+             style="text-align:center; display:block; margin: 0 auto;"
+             data-ad-client="ca-pub-8642963533812241"
+             data-ad-slot="3528506465"
+             data-ad-format="horizontal"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
         <!--Semi-Featured Section-->
         <div id='SI-FeaturedGridA' class='SI-FeaturedGrid'>
         <?php $SFS = 0 ?>
@@ -68,16 +78,16 @@
             <?php endwhile ?>
         </div>
         
-        <!-- SuperIndieIO-Leaderboard -->
+        <!-- SuperIndieIO-MidLeaderboard -->
         <ins class="adsbygoogle"
-             style="text-align:center; display:block; margin: 0 auto;"
+             style="display:block"
              data-ad-client="ca-pub-8642963533812241"
-             data-ad-slot="3528506465"
+             data-ad-slot="8528819498"
              data-ad-format="horizontal"></ins>
         <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+                (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
-        
+
         <!--Main Posts Section-->
         <div id='SI-MainPosts'>
             
@@ -86,6 +96,7 @@
             <?php global $wp_query, $paged; $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; $query = new WP_Query( ); ?>
             <?php if ( $wp_query->have_posts() ) : while( $wp_query->have_posts() ) : $wp_query>the_post(); ?>
             <?php if( ($post->ID == $primary) || ($post->ID == $secondary) || ($post->ID == $tertiary) || ($post->ID == $fourth) || ($post->ID == $fifth) ) {continue;} ?>
+            <?php if ( $c==6 ) { break; } ?>
             <?php $c++ ?>
 
             <?php $post = get_the_ID(); ?>   
@@ -110,17 +121,6 @@
     <footer>
         <a href='<?php echo esc_url( home_url( '/' ) ); ?>'>
             <img id='SI-FooterLogo' src='<?php echo get_template_directory_uri(); ?>/img/SuperIndieIOSmallLogo.png'/></a>
-        <div id='SI-FooterSocialIcons'>
-                <a href="http://twitter.com/superindieio" onclick="ga('send', 'event', 'Social Follow', 'Twitter Follow', 'Twitter', '1');" target='_blank'>
-                <img src='<?php echo get_template_directory_uri(); ?>/social-icons/twitter.svg' class='social-image-follow' /></a>
-                
-                <a href="http://facebook.com/superindieio" onclick="ga('send', 'event', 'Social Follow', 'Facebook Follow', 'Facebook', '1');" target='_blank'>
-                <img src='<?php echo get_template_directory_uri(); ?>/social-icons/facebook.svg' class='social-image-follow' /></a>
-                
-                <a href="https://www.youtube.com/channel/UC0hq2bUJYw7NN12pf_7HDCw" onclick="ga('send', 'event', 'Social Follow', 'Youtube Follow', 'Youtube', '1');" target='_blank'>
-                <img src='<?php echo get_template_directory_uri(); ?>/social-icons/youtube.svg' class='social-image-follow' /></a>
-            </div>
-        
         <div id='SI-FooterInfo'>
             <a href='<?php echo esc_url( home_url( '/' ) ); ?>about-us'>About Us</a>
             <a href='<?php echo esc_url( home_url( '/' ) ); ?>contact-us'>Contact Us</a>
