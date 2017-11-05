@@ -161,9 +161,10 @@ footer {
 /*Social Media Classes*/
 .social-image-follow {
     display: inline-block;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     margin: 0 4px;
+    border-radius: 50%;
     }
 
 /*Universal Classes*/

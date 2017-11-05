@@ -169,11 +169,11 @@ blockquote {
 /*Footer IDs */
 #SI-FooterLogo {
     display: block;
-    margin: 16px auto;
+    margin: 8px auto;
     }
 #SI-FooterInfo {
     display: table;
-    margin: 16px auto;
+    margin: 8px auto;
     }
 #SI-FooterInfo > a {
     display: inline-table;
@@ -181,6 +181,12 @@ blockquote {
     color: #484848;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
+    }
+#SI-FooterSocialIcons {
+    display: inline-block;
+    padding: 8px 0 1px 0;
+    width: 100%;
+    text-align: center;
     }
 
 /*Post Class Styles*/
@@ -268,6 +274,13 @@ blockquote {
     height: 48px;
     margin: 0 6px;
     }
+.social-image-follow {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 6px;
+    border-radius: 50%;
+    }
 
 /*Universal Sub Classes*/
 .img-background {
@@ -278,7 +291,7 @@ blockquote {
     font-style: italic;
     }
 
-/*Embed-COntainer*/
+/*Embed-Container*/
 .embed-container {
     position: relative;
     margin: 0 0 1em 0;

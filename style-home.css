@@ -48,14 +48,14 @@ footer {
     margin: 0 auto;
     }
 
-/*SI Footer IDs*/
+/*Footer IDs */
 #SI-FooterLogo {
     display: block;
-    margin: 16px auto;
+    margin: 8px auto;
     }
 #SI-FooterInfo {
     display: table;
-    margin: 16px auto;
+    margin: 8px auto;
     }
 #SI-FooterInfo > a {
     display: inline-table;
@@ -63,6 +63,12 @@ footer {
     color: #484848;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
+    }
+#SI-FooterSocialIcons {
+    display: inline-block;
+    padding: 8px 0 1px 0;
+    width: 100%;
+    text-align: center;
     }
 
 /*SI Post Classes*/
@@ -137,15 +143,13 @@ footer {
     visibility: visible;
     }
 
-/*Category Medium Posts*/
-.SI-MidFeatured {
-    margin: 0 0 16px 0;
-}
-.SI-MidFeaturedPost {
-    border-radius: 4px;
-    position: relative;
-        padding-top: 28.125%
-}
+#SI-404 {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
 
 /*Search*/
 #SI-SearchBar {
@@ -164,6 +168,21 @@ footer {
     background-color: #E0F2F1;
     border-color: #484848;
 }
+
+/*Category Medium Posts*/
+.SI-MidFeatured {
+    margin: 0 0 16px 0;
+    }
+.SI-MidFeaturedPost {
+    border-radius: 4px;
+    position: relative;
+    padding-top: 28.125%
+    }
+.SI-MidFeatured:hover .SI-SemiFeaturedSubHeadline {
+    max-height: 4em;
+    visibility: visible;
+    }
+
 
 /*Main Posts*/
 .SI-PostSmall { 
@@ -196,10 +215,22 @@ footer {
     visibility: visible;
     }
 
+/*Social Media Classes*/
+.social-image-follow {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 6px;
+    border-radius: 50%;
+    }
+
 /*Universal Classes*/
 .img-background {
     background: no-repeat center;
     background-size: cover;
+    }
+.italics {
+    font-style: italic;
     }
 
 /*Navigation */

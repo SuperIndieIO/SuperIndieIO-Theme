@@ -22,6 +22,8 @@ $contactmethods['twitter'] = 'Twitter';
 $contactmethods['facebook'] = 'Facebook';
 // Add Title
 $contactmethods['title'] = 'Title';
+// Add Adsense Code
+$contactmethods['authoradsense'] = 'Adsense';
 
 return $contactmethods;
 }
@@ -113,41 +115,30 @@ add_filter('default_page_template_title', function() {
 // ****************************************************************************************************	//
 // AMP support
 
-//define( 'AMP_QUERY_VAR', apply_filters( 'amp_query_var', 'amp' ) );
+define( 'AMP_QUERY_VAR', apply_filters( 'amp_query_var', 'amp' ) );
 
-//add_rewrite_endpoint( AMP_QUERY_VAR, EP_PERMALINK );
+add_rewrite_endpoint( AMP_QUERY_VAR, EP_PERMALINK );
 
-//add_filter( 'template_include', 'amp_page_template', 99 );
+add_filter( 'template_include', 'amp_page_template', 99 );
 
-//function amp_page_template( $template ) {
+function amp_page_template( $template ) {
 
-//    if( get_query_var( AMP_QUERY_VAR, false ) !== false ) {
+    if( get_query_var( AMP_QUERY_VAR, false ) !== false ) {
 
-//        if ( is_single() ) {
-//            $template = get_template_directory() .  '/single-amp.php';
-//        } 
-//    }
-//    return $template;
-//}
+        if ( is_single() ) {
+            $template = get_template_directory() .  '/single-amp.php';
+        } 
+    }
+    return $template;
+}
 
-//function transform_amp()
-//{
-//    $content = $this->original_content;
-//    $content = apply_filters('the_content', $content);
-//    // We run kses before AMP conversion due to a kses bug which doesn't allow hyphens (#34105-core).
-//    // Our custom kses handler strips out all not-allowed stuff and leaves in stuff that will be converted (like iframe, img, audio, video).
-//    // Technically, conversion should catch the tags so we shouldn't need to run it after anyway.
-//    $content = AMP_KSES::strip($content);
-//    // Convert HTML to AMP
-//    // see <a href="https://github.com/ampproject/amphtml/blob/master/spec/amp-html-format.md#html-tags">https://github.com/ampproject/amphtml/blob/master/spec/amp-html-format.md#html-tags</a>)
-//    $scripts = array();
-//    $converter = new AMP_Img_Converter($content);
-//    $content = $converter->convert(array('layout' => 'responsive'));
-//    $this->add_scripts($converter->get_scripts());
-//    $converter = new AMP_Iframe_Converter($content);
-//    $content = $converter->convert(array('layout' => 'responsive'));
-//    $this->add_scripts($converter->get_scripts());
-//    return $content;
-//}
+add_filter( 'amp_post_template_file', 'xyz_amp_set_custom_template', 10, 3 );
+
+function xyz_amp_set_custom_template( $file, $type, $post ) {
+	if ( 'single' === $type ) {
+		$file = dirname( __FILE__ ) . '/single-amp.php';
+	}
+	return $file;
+}
 
 ?>

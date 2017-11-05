@@ -86,6 +86,15 @@
             color: #484848;
             font-weight: 400;
         }
+        #SI-PostSocialMedia {
+            display: inline-block;
+            padding: 8px 0 1px 0;
+            margin: 0 0 16px 0;
+            width: 100%;
+            border-top: #484848 1px solid;
+            border-bottom: #484848 1px solid;
+            text-align: center;
+            }
         .SI-RelatedCategoryIMG {
             border-radius: 4px;
         }
@@ -96,6 +105,28 @@
             font-weight: 700;
             
         }
+        /*Footer IDs */
+        #SI-FooterLogo {
+            display: block;
+            margin: 8px auto;
+            }
+        #SI-FooterInfo {
+            display: table;
+            margin: 8px auto;
+            }
+        #SI-FooterInfo > a {
+            display: inline-table;
+            margin: 0 8px;
+            color: #484848;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            }
+        #SI-FooterSocialIcons {
+            display: inline-block;
+            padding: 8px 0 1px 0;
+            width: 100%;
+            text-align: center;
+            }
         .header-logo {
             margin: 16px auto;
             display: block;
@@ -104,8 +135,20 @@
             margin: 0 8px;
             border-radius: 4px;
         }
-        .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
-        .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        /*Social Media Classes*/
+        .social-image {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            margin: 0 6px;
+            }
+        .social-image-follow {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin: 0 6px;
+            border-radius: 50%;
+            }
 
     </style>
     

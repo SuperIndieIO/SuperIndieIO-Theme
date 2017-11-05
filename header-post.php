@@ -25,9 +25,6 @@
     <meta name='description' content='<?php echo(get_the_excerpt()); ?>'>
     <meta name='language' content='english'>
     
-    <!--Temporary AMP Support Removal-->
-    <!--<link rel="amphtml" href='<?php echo get_the_permalink(); ?>amp/'>-->
-    
     <!--Facebook Meta Info-->
 	<meta property='og:type' content='article'/>
 	<meta property='og:title' content='<?php echo get_the_title(); ?>'/>
