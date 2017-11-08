@@ -2,7 +2,7 @@
 Template Name: Video Template
 Template Post Type: post
 */
-get_header('post');
+get_header('video');
 ?>
 <body>
     <!--Header logo for SuperIndieIO-->
