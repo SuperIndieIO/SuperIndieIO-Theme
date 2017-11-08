@@ -12,7 +12,7 @@
 <head>
     
     <!--Styles-->
-    <link rel="stylesheet"  type="text/css" href='<?php echo get_template_directory_uri(); ?>/style-home.css?v=<?=time();?>'/>
+    <link rel="stylesheet"  type="text/css" href='<?php echo get_template_directory_uri(); ?>/style-home.css'/>
     <meta name='viewport' content='initial-scale=1'/>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
     <meta name='theme-color' content='#00796B' />
